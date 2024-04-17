@@ -5,7 +5,7 @@ export default function Header(){
         <header>
             <div id="Header-main">
                 <div id="header-logo-container">
-                    <img src='logo.svg' alt="" />
+                    <img src='ing.svg' alt="" />
                 </div>
                 <div id="insta-options">
                     <span>Video Downloader</span>
