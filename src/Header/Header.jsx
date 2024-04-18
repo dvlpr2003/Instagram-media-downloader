@@ -5,7 +5,7 @@ export default function Header(){
         <header>
             <div id="Header-main">
                 <div id="header-logo-container">
-                    <img src='ing.svg' alt="" />
+                    <img src='ing.svg' alt="instagram video downloader logo" />
                 </div>
                 <div id="insta-options">
                     <span>Video Downloader</span>
