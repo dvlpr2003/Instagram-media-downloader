@@ -1,5 +1,53 @@
-#instagram-downloader-home-1{
-    background: linear-gradient(104.95deg, rgba(57, 141, 177, 0.9) -3.32%, rgba(140, 64, 240, 0.9) 33.5%, rgba(147, 62, 255, .9) 60.99%, rgba(240, 14, 82, 0.9) 99.13%);
+section{
     width: 100%;
-    height: 40rem;
 }
+
+#instagram-downloader-home-1{
+    background: linear-gradient(104.95deg, rgba(126, 172, 192, 0.9) -3.32%, rgba(140, 64, 240, 0.9) 33.5%, rgba(124, 48, 224, 0.9) 60.99%, rgba(238, 35, 96, 0.9) 99.13%);
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#section-elements{
+    margin-bottom: auto;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30rem;
+}
+#section-elements-nav-option{
+    background-color: #ffffff3b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* padding: .7rem; */
+
+}
+#section-elements-nav-option a {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    color: #f0efef;
+    font-family: Roboto,sans-serif;
+    width: 10rem;
+    height: 3.5rem;
+    border-left: 3px solid white;
+}
+#section-elements-nav-option a img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
