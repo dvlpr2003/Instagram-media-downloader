@@ -1,10 +1,13 @@
 
 import Header from "./Header/Header"
+import Section1 from "./Home/container-1"
 function App() {
 
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
+    <Section1/>
+
     </>
   )
 }
