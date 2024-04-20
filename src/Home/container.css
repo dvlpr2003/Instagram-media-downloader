@@ -89,7 +89,7 @@ section{
 #input-w3-c7-form{
     padding: 1.45rem;
     width:50rem;
-    background-color: #ffffffb7;
+    background-color: #ffffffd0;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -184,6 +184,27 @@ section{
     }
     #input-w3-c7-form{
         width: 30rem;
+    }
+
+
+}
+@media(min-width:750px) and (max-width:950px){
+    .name-w3-c7{
+        display: none;
+    }
+ 
+    #section-elements-nav-main{
+        width: 100%;
+    }
+    #h1-w3-c7{
+        font-size: 1.5rem;
+    }
+    #p-w3-c7{
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+    #input-w3-c7-form{
+        width: 43rem;
     }
 
 }
