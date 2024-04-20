@@ -75,11 +75,13 @@ section{
     color: #ffffffc7;
     font-size: 2rem;
     font-weight: normal;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    padding-bottom: 1.6rem;
     
 }
 #p-w3-c7{
-    margin-bottom: 1.6rem;
+    padding-bottom: 1.9rem;
+    /* margin-bottom: 1.6rem; */
     font-size: 1.3rem;
     font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     color: #ffffffc7;
