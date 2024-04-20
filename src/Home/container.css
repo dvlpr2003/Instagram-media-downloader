@@ -1,10 +1,9 @@
 section{
     width: 100%;
 }
-
-#instagram-downloader-home-1{
+#app{
     background: linear-gradient(104.95deg, rgba(157, 190, 203, 0.9) -3.32%, rgba(46, 140, 239, 0.9) 33.5%, rgba(99, 148, 196, 0.9) 60.99%, rgba(93, 204, 56, 0.9) 99.13%);
-    width: 100%;
+    /* width: 100%; */
     height: 50rem;
     display: flex;
     flex-direction: column;
@@ -12,33 +11,42 @@ section{
     align-items: center;
     flex-wrap: wrap;
 }
+
+#instagram-downloader-home-1{
+
+    height: 100%;
+    
+}
 #section-elements{
+    margin-top: 4rem;
     margin-bottom: auto;
     align-self: flex-start;
-    border: 1px solid black;
-    width: 100%;
-    height: 30rem;
+    /* border: 1px solid black; */
+    /* height: 100%; */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+#section-elements-nav-main{
+    width: 43rem;
+    display: flex;
+    
 
+
+}
 #section-elements-nav-option{
-
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff3b;
     border-radius: 10px;
+    background-color: #ffffff3b;
     
 }
 .w3-c7{
-    
-    /* width:10rem; */
-    flex-basis: 20rem;
     flex-grow: 1;
     height: 3rem;
     border-left: 1px solid white;
@@ -59,7 +67,7 @@ section{
     height: auto;
 }
 
-@media(min-width:100px) and (max-width:700px){
+@media(min-width:50px) and (max-width:750px){
     #section-elements{
     }
     .name-w3-c7{
@@ -67,5 +75,8 @@ section{
     }
     .w3-c7{
         /* width: 3rem; */
+    }
+    #section-elements-nav-main{
+        width: 100%;
     }
 }

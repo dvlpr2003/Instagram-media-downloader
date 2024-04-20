@@ -3,16 +3,19 @@ import "./container.css"
 
 export default function Section1(){
     return(
+        <div id="app">
         <section id="instagram-downloader-home-1">
             <Section1Elements/>
 
         </section>
+        </div>
     )
 }
 
 function Section1Elements(){
     return(
         <div id="section-elements">
+            <div id="section-elements-nav-main">
             <div id="section-elements-nav-option" >
                 <a href="#" className="w3-c7 justify" style={{border:"none"}}>
                     <img src="photo.svg" alt="photo"  className="insta-svg-img"/>
@@ -36,7 +39,7 @@ function Section1Elements(){
                     <span className="name-w3-c7">Highlights</span>
                 </a>
             </div>
-
+            </div>
         </div>
     )
 }
