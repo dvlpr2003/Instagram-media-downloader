@@ -40,6 +40,22 @@ function Section1Elements(){
                 </a>
             </div>
             </div>
+            <div id="h1-w3-c7">
+                <Section1H1/>
+            </div>
+            <div id="p-w3-c7">
+                <SectionP/>
+            </div>
         </div>
+    )
+}
+function Section1H1(){
+    return(
+        <h1>Download Instagram Videos</h1>
+    )
+}
+function SectionP(){
+    return(
+        <p>Paste the URL of the Instagram post, reel, or story and press to download in HD</p>
     )
 }
