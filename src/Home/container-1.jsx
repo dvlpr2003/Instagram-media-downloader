@@ -44,8 +44,12 @@ function Section1Elements(){
                 <Section1H1/>
             </div>
             <div id="p-w3-c7">
-                <SectionP/>
+                <Section1P/>
             </div>
+            <form id="input-w3-c7-form">
+                <Section1Input/>
+
+            </form>
         </div>
     )
 }
@@ -54,8 +58,19 @@ function Section1H1(){
         <h1>Download Instagram Videos</h1>
     )
 }
-function SectionP(){
+function Section1P(){
     return(
         <p>Paste the URL of the Instagram post, reel, or story and press to download in HD</p>
+    )
+}
+function Section1Input(){
+    return(
+        <div id="input-w3-c7-main">
+            <div id="input-w3-c7-main-element">
+                <input type="text" className="input-w3-c7" placeholder="https.//"/>
+                <button type="submit" className="input-w3-c7-btn">Download</button>
+            </div>
+
+        </div>
     )
 }
