@@ -39,6 +39,23 @@ function Section2Body(){
                     <img src="img/insta-img.png" alt="instagram-photo-downloader" className="w4-c7-s-b-img"/>
                 </div>
             </div>
+            <div className="w4-c7-s-b-main">
+                <div className="w4-c7-s-b-img-container" >
+                    <img src="img/reels-img1.png" alt="instagram-photo-downloader" className="w4-c7-s-b-img"/>
+                </div>
+                <div className="w4-c7-s-b-txt">
+                    <a href="#" className="w4-c7-s-b-txt-a">
+                    Instagram Photo Downloader
+                    </a>
+                    <p className="w4-c7-s-b-txt-p">
+                    Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
+                    </p>
+
+
+                </div>
+            </div>
+            
+
         </div>
     )
 }
