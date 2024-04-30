@@ -23,20 +23,20 @@ function Section1Elements({Heading,setHeading}){
                     <img src="photo.svg" alt="photo"  className="insta-svg-img"/>
                     <span className="name-w3-c7">Photo</span>
                 </a>
-                <a href="#" className="w3-c7 justify">
+                <a href="#" className="w3-c7 justify" onClick={()=>setHeading(()=>"Instagram Reels Downloader")}>
 
                     <img src="reels.svg" alt="reels"  className="insta-svg-img" />
                     <span className="name-w3-c7">Reels</span>
                 </a>
-                <a href="#" className="w3-c7 justify">
+                <a href="#" className="w3-c7 justify" onClick={()=>setHeading(()=>"Instagram Video Downloader")}>
                     <img src="video.svg" alt="video" className="insta-svg-img"/>
                     <span className="name-w3-c7">Video</span>
                 </a>
-                <a href="#" className="w3-c7 justify">
+                <a href="#" className="w3-c7 justify" onClick={()=>setHeading(()=>"Instagram Story Downloader")}>
                     <img src="story.svg" alt="story" className="insta-svg-img" />
                     <span className="name-w3-c7">Story</span>
                 </a>
-                <a href="#" className="w3-c7 justify">
+                <a href="#" className="w3-c7 justify" onClick={()=>setHeading(()=>"Instagram Highlights Downloader")}>
                     <img src="highlights.svg" alt="Highlights"  className="insta-svg-img"/>
                     <span className="name-w3-c7">Highlights</span>
                 </a>
