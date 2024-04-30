@@ -1,23 +1,25 @@
 
+import { useState } from "react"
 import "./container.css"
 
 export default function Section1(){
+    const[Heading,setHeading] = useState("Instagram Downloader")
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            <Section1Elements/>
+            <Section1Elements Heading={Heading} setHeading={setHeading}/>
 
         </section>
         </div>
     )
 }
 
-function Section1Elements(){
+function Section1Elements({Heading,setHeading}){
     return(
         <div id="section-elements">
             <div id="section-elements-nav-main">
             <div id="section-elements-nav-option" >
-                <a href="#" className="w3-c7 justify" style={{border:"none"}}>
+                <a href="#" className="w3-c7 justify" style={{border:"none"}} onClick={()=>setHeading(()=>"Instagram Photo Downloader")}>
                     <img src="photo.svg" alt="photo"  className="insta-svg-img"/>
                     <span className="name-w3-c7">Photo</span>
                 </a>
@@ -41,7 +43,7 @@ function Section1Elements(){
             </div>
             </div>
             <div id="h1-w3-c7">
-                <Section1H1/>
+                <Section1H1 Heading={Heading}/>
             </div>
             <div id="p-w3-c7">
                 <Section1P/>
@@ -53,9 +55,9 @@ function Section1Elements(){
         </div>
     )
 }
-function Section1H1(){
+function Section1H1({Heading}){
     return(
-        <h1>Download Instagram Videos</h1>
+        <h1>{Heading}</h1>
     )
 }
 function Section1P(){
