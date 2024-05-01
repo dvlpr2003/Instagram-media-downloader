@@ -2,11 +2,11 @@
 import "./container2.css"
 
 
-export default function Section2Main(){
+export default function Section2Main({Heading,setHeading}){
     return(
         <section id="section2-main">
             <Section2Heading/>
-            <Section2Body/>
+            <Section2Body Heading={Heading} setHeading={setHeading}/>
         </section>
     )
 }
@@ -21,12 +21,12 @@ function Section2Heading(){
     )
 }
 
-function Section2Body(){
+function Section2Body({Heading,setHeading}){
     return(
         <div className="section-2-body-main">
             <div className="w4-c7-s-b-main">
                 <div className="w4-c7-s-b-txt">
-                    <a href="#" className="w4-c7-s-b-txt-a">
+                    <a href="#" className="w4-c7-s-b-txt-a" onClick={()=>setHeading(()=>"Instagram Photo Downloader")}>
                     Instagram Photo Downloader
                     </a>
                     <p className="w4-c7-s-b-txt-p">
@@ -44,7 +44,7 @@ function Section2Body(){
                     <img src="img/reels-img1.png" alt="instagram-photo-downloader" className="w4-c7-s-b-img"/>
                 </div>
                 <div className="w4-c7-s-b-txt ">
-                    <a href="#" className="w4-c7-s-b-txt-a">
+                    <a href="#" className="w4-c7-s-b-txt-a" onClick={()=>setHeading(()=>"Instagram Reels Downloader")}>
                     Instagram Reels Downloader
                     </a>
                     <p className="w4-c7-s-b-txt-p">
@@ -56,7 +56,7 @@ function Section2Body(){
             </div>
             <div className="w4-c7-s-b-main">
                 <div className="w4-c7-s-b-txt">
-                    <a href="#" className="w4-c7-s-b-txt-a">
+                    <a href="#" className="w4-c7-s-b-txt-a" onClick={()=>setHeading(()=>"Instagram Video Downloader")}>
                     Instagram Video Downloader
                     </a>
                     <p className="w4-c7-s-b-txt-p">
@@ -73,7 +73,7 @@ function Section2Body(){
                 <div className="w4-c7-s-b-img-container order" >
                     <img src="img/carousel.png" alt="instagram-photo-downloader" className="w4-c7-s-b-img"/>
                 </div>
-                <div className="w4-c7-s-b-txt">
+                <div className="w4-c7-s-b-txt" onClick={()=>setHeading(()=>"Instagram Carousel & Album Downloader")}>
                     <a href="#" className="w4-c7-s-b-txt-a">
                     Carousel / Album Downloader
                     </a>
