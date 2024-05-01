@@ -1,9 +1,7 @@
 
-import { useState } from "react"
 import "./container.css"
 
-export default function Section1(){
-    const[Heading,setHeading] = useState("Instagram Downloader")
+export default function Section1({Heading,setHeading}){
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
