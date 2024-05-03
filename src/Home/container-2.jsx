@@ -84,6 +84,7 @@ function Section2Body({Heading,setHeading}){
 
                 </div>
             </div>
+            
 
         </div>
     )
