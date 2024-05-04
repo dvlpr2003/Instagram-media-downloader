@@ -142,7 +142,7 @@ section{
 .result {
     margin-top: 1rem;
     margin-bottom:1rem ;
-    border: 1px solid black;
+    border: 1px solid rgb(240, 240, 240);
     width: 50rem;
     height: auto;
     display: flex;
