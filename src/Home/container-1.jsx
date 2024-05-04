@@ -68,7 +68,9 @@ function Section1Input(){
         <div id="input-w3-c7-main">
             <div id="input-w3-c7-main-element">
                 <input type="text" className="input-w3-c7" placeholder="https.//"/>
-                <button type="submit" className="input-w3-c7-btn"><div class="loader"></div></button>
+                <button type="submit" className="input-w3-c7-btn">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    </button>
             </div>
 
         </div>
