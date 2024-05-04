@@ -5,7 +5,8 @@ export default function Section1({Heading,setHeading}){
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            <Section1Elements Heading={Heading} setHeading={setHeading}/>
+            {/* <Section1Elements Heading={Heading} setHeading={setHeading}/> */}
+            <Result/>
 
         </section>
         </div>
@@ -73,6 +74,71 @@ function Section1Input(){
                     </button>
             </div>
 
+        </div>
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function Result(){
+    return(
+        <div className="result">
+            <div className="result-sub img">
+                <img src="test.jpg" alt="" />
+                <div className="svg-container-w3-c7">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+</svg>
+
+
+<p>Download.mp4</p>
+
+                </div>
+            </div>
+
+
+            <div className="result-sub img">
+                <img src="test.jpg" alt="" />
+                <div className="svg-container-w3-c7">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+</svg>
+
+
+<p>Download.mp4</p>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div className="result-sub img">
+                <img src="test.jpg" alt="" />
+                <div className="svg-container-w3-c7">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+</svg>
+
+
+<p>Download.mp4</p>
+
+                </div>
+            </div>
         </div>
     )
 }
