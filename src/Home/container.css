@@ -125,12 +125,26 @@ section{
 .input-w3-c7-btn{
     height: 3.5rem;
     width: 10rem;
-    border-radius: 15px;
+    border-radius: 16px;
     font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 
     border: 1px solid #48e748;
     background-color: #48e748;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.loader {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#000000 0 90deg,#ccc 0 180deg);
+    animation: l21 1s infinite linear;
+  }
+  @keyframes l21 {
+    100% {transform: rotate(.5turn)}
+  }
 @media(min-width:50px) and (max-width:300px){
     .name-w3-c7{
         display: none;
