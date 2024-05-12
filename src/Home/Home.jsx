@@ -8,7 +8,7 @@ export default function Home(){
     const[Heading,setHeading] = useState("Instagram Downloader")
     return(
         <>
-        <Header/>
+        <Header setHeading={setHeading}/>
         <Section1 Heading={Heading} setHeading={setHeading}/>
         <Section2Main Heading={Heading} setHeading={setHeading}/>
 

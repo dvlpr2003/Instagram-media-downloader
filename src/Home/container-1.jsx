@@ -5,8 +5,8 @@ export default function Section1({Heading,setHeading}){
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            {/* <Section1Elements Heading={Heading} setHeading={setHeading}/> */}
-            <Result/>
+            <Section1Elements Heading={Heading} setHeading={setHeading}/>
+            {/* <Result/> */}
 
         </section>
         </div>

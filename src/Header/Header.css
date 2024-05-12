@@ -39,6 +39,9 @@ header {
     color: #302f2f;
     font-size: 1em;
 }
+.nav-options {
+    cursor: pointer;
+}
 #header-logo-container {
     margin-right: auto;
     align-self:start;

@@ -1,6 +1,6 @@
 
 import "./Header.css"
-export default function Header(){
+export default function Header({setHeading}){
     return(
         <header>
             <div id="Header-main">
@@ -8,11 +8,10 @@ export default function Header(){
                     <img src='ing.svg' alt="instagram video downloader logo" />
                 </div>
                 <div id="insta-options">
-                    <span>Video Downloader</span>
-                    <span>Photo Downloader</span>
-                    <span>Reels Downloader</span>
-                    <span>Story Saver</span>
-                    <span>Story Viewer</span>
+                    <span onClick={()=>setHeading(()=>"Instagram Video Downloader")} className="nav-options">Video Downloader</span>
+                    <span onClick={()=>setHeading(()=>"Instagram Photo Downloader")} className="nav-options">Photo Downloader</span>
+                    <span onClick={()=>setHeading(()=>"Instagram Reels Downloader")} className="nav-options">Reels Downloader</span>
+                    <span onClick={()=>setHeading(()=>"Instagram Story Downloader")} className="nav-options">Story Saver</span>
                 </div>
                 <div id="container-3">
                     <span>FAQ</span>
