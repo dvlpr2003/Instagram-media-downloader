@@ -1,19 +1,52 @@
 
+import axios from "axios"
 import "./container.css"
+import { useState } from "react";
 
 export default function Section1({Heading,setHeading}){
+    const [Link,setLink]=useState("")
+    const [isLoading,setLoading]=useState(false)
+    const [ExtractedData,setExtractedData]=useState(null)
+    async function getDada(){
+        const regex = /\/reel\/([^/]+)\//;
+        const regex2 = /\/p\/([^/]+)\//;
+        const match = Link.match(regex) || Link.match(regex2);
+      
+        let uniqueIdentifier = "";
+        if (match && match[1]) {
+          uniqueIdentifier = match[1];
+        }
+        console.log(uniqueIdentifier)
+        try{
+            setLoading(true)
+            const response = await axios.get(`http://127.0.0.1:8000/api/download-instagram-post/${uniqueIdentifier}`);
+            console.log(response.data)
+            setExtractedData([response.data])
+            setLoading(false)
+        }catch(error){
+            console.log(error)
+            setLoading(false)
+        }
+    }
+
+
+    function ClickEvent(){
+        getDada()
+
+    }
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            <Section1Elements Heading={Heading} setHeading={setHeading}/>
-            {/* <Result/> */}
+            {
+         (ExtractedData === null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:""}
+            {ExtractedData && <Result ExtractedData={ExtractedData}/>}
 
         </section>
         </div>
     )
 }
 
-function Section1Elements({Heading,setHeading}){
+function Section1Elements({Heading,setHeading,ClickEvent,setLink,isLoading}){
     return(
         <div id="section-elements">
             <div id="section-elements-nav-main">
@@ -48,7 +81,7 @@ function Section1Elements({Heading,setHeading}){
                 <Section1P/>
             </div>
             <form id="input-w3-c7-form">
-                <Section1Input/>
+                <Section1Input ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>
 
             </form>
         </div>
@@ -64,14 +97,14 @@ function Section1P(){
         <p>Paste the URL of the Instagram post, reel, or story and press to download in HD</p>
     )
 }
-function Section1Input(){
+function Section1Input({ClickEvent,setLink,isLoading}){
     return(
         <div id="input-w3-c7-main">
             <div id="input-w3-c7-main-element">
-                <input type="text" className="input-w3-c7" placeholder="https.//"/>
-                <button type="submit" className="input-w3-c7-btn">
-                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                    </button>
+                <input type="text" className="input-w3-c7" placeholder="https://" onChange={(e)=>setLink(e.target.value)}/>
+                <span type="submit" className="input-w3-c7-btn" onClick={ClickEvent}>
+                {isLoading?<div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>:"Donwload"}
+                    </span>
             </div>
 
         </div>
@@ -89,66 +122,28 @@ function Section1Input(){
 
 
 
-function Result(){
+function Result({ExtractedData}){
     return(
         <div className="result">
-            <div className="result-sub img">
-                <img src="test.jpg" alt="" />
-                <div className="svg-container-w3-c7">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
-</svg>
-
-
-<p>Download.mp4</p>
-
-                </div>
-            </div>
-
-
-            <div className="result-sub img">
-                <img src="test.jpg" alt="" />
-                <div className="svg-container-w3-c7">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
-</svg>
-
-
-<p>Download.mp4</p>
-
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-            <div className="result-sub img">
-                <img src="test.jpg" alt="" />
-                <div className="svg-container-w3-c7">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
-</svg>
-
-
-<p>Download.mp4</p>
-
-                </div>
-            </div>
-            <div className="result-sub img">
-                <img src="test.jpg" alt="" />
-                <div className="svg-container-w3-c7">
-                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
-</svg> */}
-<div class="loader"></div>
-
-                </div>
-            </div>
+            {ExtractedData.map((e)=><ResultOutput/>)}
         </div>
+    )
+}
+{/* <div class="loader"></div> */}
+
+function ResultOutput(){
+    return(
+        <div className="result-sub img">
+        <img src="test.jpg" alt="" />
+        <div className="svg-container-w3-c7">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+<path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+</svg>
+
+
+<p>Download.mp4</p>
+
+        </div>
+    </div>
     )
 }
