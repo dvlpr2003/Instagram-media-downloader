@@ -20,8 +20,9 @@ export default function Section1({Heading,setHeading}){
         try{
             setLoading(true)
             const response = await axios.get(`http://127.0.0.1:8000/api/download-instagram-post/${uniqueIdentifier}`);
-            console.log(response.data)
-            setExtractedData([response.data])
+            // const response = await axios.get(`http://127.0.0.1:8000/api/proxy/`);
+            console.log(response.data.data_url)
+            setExtractedData(response.data.data_url)
             setLoading(false)
         }catch(error){
             console.log(error)
@@ -125,16 +126,17 @@ function Section1Input({ClickEvent,setLink,isLoading}){
 function Result({ExtractedData}){
     return(
         <div className="result">
-            {ExtractedData.map((e)=><ResultOutput/>)}
+            <ResultOutput img_src = {ExtractedData}/>
+            {/* <ResultOutput/> */}
         </div>
     )
 }
 {/* <div class="loader"></div> */}
 
-function ResultOutput(){
+function ResultOutput({img_src}){
     return(
         <div className="result-sub img">
-        <img src="test.jpg" alt="" />
+<img src={img_src} alt="Instagram Image" />
         <div className="svg-container-w3-c7">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
 <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
