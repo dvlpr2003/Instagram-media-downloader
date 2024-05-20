@@ -20,9 +20,9 @@ export default function Section1({Heading,setHeading}){
         try{
             setLoading(true)
             const response = await axios.get(`http://127.0.0.1:8000/api/download-instagram-post/${uniqueIdentifier}`);
-            // const response = await axios.get(`http://127.0.0.1:8000/api/proxy/`);
-            console.log(response.data.data_url)
-            setExtractedData(response.data.data_url)
+            console.log(response.data[0])
+            setExtractedData(response.data)
+
             setLoading(false)
         }catch(error){
             console.log(error)
@@ -126,14 +126,14 @@ function Section1Input({ClickEvent,setLink,isLoading}){
 function Result({ExtractedData}){
     return(
         <div className="result">
-            <ResultOutput img_src = {ExtractedData}/>
+            <ResultOutput img_src = {ExtractedData[0].url.video_img_1} video_src = {ExtractedData[0].url.video_1}/>
             {/* <ResultOutput/> */}
         </div>
     )
 }
 {/* <div class="loader"></div> */}
 
-function ResultOutput({img_src}){
+function ResultOutput({img_src,video_src}){
     return(
         <div className="result-sub img">
 <img src={img_src} alt="Instagram Image" />
@@ -143,7 +143,7 @@ function ResultOutput({img_src}){
 </svg>
 
 
-<p>Download.mp4</p>
+<a href={video_src} download={true} target="new">Download.mp4</a>
 
         </div>
     </div>
