@@ -10,21 +10,28 @@ footer {
     justify-content: center;
     align-items: center;
 }
+.foo-container {
+    padding-top: 1.5rem;
+}
 .devo-des{
     font-family: Roboto, sans-serif;
     gap: .3rem;
     padding-bottom: 1rem;
 }
-.ul {
+.ult {
+    padding: 0;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    
+
 }
 .ul-itm {
+    flex-basis: 8rem;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +40,9 @@ footer {
     padding-left: 2rem;
     padding-right: 2rem;
 }
+/* .ul-itm :hover {
+    background-color: rgb(96, 134, 167);
+} */
 .ul-itm a {
     text-decoration: none;
     color: black;

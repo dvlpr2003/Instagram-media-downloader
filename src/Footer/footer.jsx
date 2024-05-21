@@ -4,7 +4,7 @@ export default function Foo(){
         <>
         <footer>
             <div className='foo-container'>
-                <ul className='ul'>
+                <ul className='ult'>
                     <li className='ul-itm'>
                         <a href="#">About</a>
                     </li>
