@@ -9,6 +9,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
     padding-bottom: 5rem;
 }
 
@@ -17,8 +18,32 @@ section{
 
     height: 100%;
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
+    /* align-items: center; */
     
+}
+.j-6 {
+    height: 2rem;
+}
+.Download-again-btn{
+    cursor: pointer;
+    width: 15rem;
+    height: 3.5rem;
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #48e748;
+    border-radius: 20px;
+    font-family: Roboto, sans-serif;
+    background-color: #48e748;
+    color: #000;
+    text-decoration: none;
+
+
 }
 #section-elements{
     margin-top: 4rem;
@@ -139,6 +164,13 @@ section{
 }
 
 
+.ft-result-w3-c6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .result {
     margin-top: 1rem;
     margin-bottom:1rem ;

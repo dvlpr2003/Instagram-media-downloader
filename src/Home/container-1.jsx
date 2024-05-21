@@ -45,8 +45,11 @@ export default function Section1({Heading,setHeading}){
             {
          (ExtractedData === null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:""}
             {ExtractedData && <Result ExtractedData={ExtractedData}/>}
+            
 
         </section>
+
+        {ExtractedData &&<DownloadAgain setExtractedData={setExtractedData}/>}
         </div>
     )
 }
@@ -129,9 +132,17 @@ function Section1Input({ClickEvent,setLink,isLoading}){
 
 function Result({ExtractedData}){
     return(
+        <>
+        {/* <div className="ft-result-w3-c6"> */}
         <div className="result">
+            
             {ExtractedData.map((e,i)=><ResultOutput data ={e} index ={i} key = {i}/>)}
+            
         </div>
+        {/* <p>hello</p> */}
+        {/* </div> */}
+        
+        </>
     )
 }
 
@@ -159,8 +170,22 @@ function ResultOutput({data,index}){
 </div>
 
         </div>
+  
     </div>
 
 
+    )
+}
+
+function DownloadAgain({setExtractedData}){
+
+    return(
+        <a href='#app'className="Download-again-btn" onClick={()=>setExtractedData(null)}>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 j-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+</svg>
+
+Download more
+        </a>
     )
 }
