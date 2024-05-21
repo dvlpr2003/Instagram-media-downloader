@@ -1,8 +1,8 @@
 footer {
-    margin-top: .5rem;
-    /* border: 1px solid black; */
+    margin-top: 1rem;
     width: 100%;
     height: auto;
+    background-color: rgb(240, 248, 255);
 }
 .foo-container,.devo-des{
     display: flex;
@@ -18,22 +18,26 @@ footer {
 
 }
 .ul {
+
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    /* width: 100%; */
     gap: 2rem;
     flex-wrap: wrap;
+
     padding-bottom: 1rem;
 }
 .ul-itm {
-    /* border: 1px solid red; */
-    width: auto;
-    /* height: 3rem; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
     
 }
 .ul-itm a {
