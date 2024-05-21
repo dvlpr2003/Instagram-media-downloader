@@ -14,19 +14,14 @@ footer {
     font-family: Roboto, sans-serif;
     gap: .3rem;
     padding-bottom: 1rem;
-
-
 }
 .ul {
-
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    /* width: 100%; */
     gap: 2rem;
     flex-wrap: wrap;
-
     padding-bottom: 1rem;
 }
 .ul-itm {
@@ -37,8 +32,6 @@ footer {
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    
-    
 }
 .ul-itm a {
     text-decoration: none;
