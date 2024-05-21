@@ -130,22 +130,12 @@ function Section1Input({ClickEvent,setLink,isLoading}){
 function Result({ExtractedData}){
     return(
         <div className="result">
-            {/* <ResultOutput img_src = {ExtractedData[0].url.video_img_1} video_src = {ExtractedData[0].url.video_1}/> */}
             {ExtractedData.map((e,i)=><ResultOutput data ={e} index ={i} key = {i}/>)}
-            {/* <ResultOutput/> */}
         </div>
     )
 }
 
 function ResultOutput({data,index}){
-    // const [loadDWBtn,setloadDWBtn]=useState(false)
-    // function ActiveLoad(){
-    //     setloadDWBtn(true)
-    //     delay(2000)
-    //     setloadDWBtn(false)
-    
-    // }
-
     return(
         <div className="result-sub img">
             {
@@ -153,7 +143,6 @@ function ResultOutput({data,index}){
                 data.url.video ?<img src={`${data.url.video_img}`} alt="Instagram Image" /> :<img src={data.url.img_c5} alt="Instagram Image" />
             }
         <div className="svg-container-w3-c7">
-            {/* <div class="loader"></div> */}
             <div className="svg-container-w3-c7-child">
         {data.url.video ?<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
 <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
