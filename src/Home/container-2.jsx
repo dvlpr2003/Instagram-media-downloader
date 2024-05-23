@@ -10,7 +10,6 @@ export default function Section2Main({Heading,setHeading}){
         </section>
     )
 }
-
 function Section2Heading(){
     return(
         <div className="section-2-heading">
@@ -20,7 +19,6 @@ function Section2Heading(){
         </div>
     )
 }
-
 function Section2Body({Heading,setHeading}){
     return(
         <div className="section-2-body-main">
@@ -32,8 +30,6 @@ function Section2Body({Heading,setHeading}){
                     <p className="w4-c7-s-b-txt-p">
                     Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
                     </p>
-
-
                 </div>
                 <div className="w4-c7-s-b-img-container" >
                     <img src="img/insta-img.png" alt="instagram-photo-downloader" className="w4-c7-s-b-img"/>
@@ -50,8 +46,6 @@ function Section2Body({Heading,setHeading}){
                     <p className="w4-c7-s-b-txt-p">
                     Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
                     </p>
-
-
                 </div>
             </div>
             <div className="w4-c7-s-b-main">
@@ -62,8 +56,6 @@ function Section2Body({Heading,setHeading}){
                     <p className="w4-c7-s-b-txt-p">
                     Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
                     </p>
-
-
                 </div>
                 <div className="w4-c7-s-b-img-container" >
                     <img src="img/video.png" alt="instagram-photo-downloader" className="w4-c7-s-b-img"/>
@@ -80,8 +72,6 @@ function Section2Body({Heading,setHeading}){
                     <p className="w4-c7-s-b-txt-p">
                     Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
                     </p>
-
-
                 </div>
             </div>
             
