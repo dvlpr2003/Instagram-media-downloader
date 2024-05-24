@@ -42,9 +42,9 @@ export default function Section1({Heading,setHeading}){
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            {
+            {/* {
          (ExtractedData === null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:""}
-            {ExtractedData && <Result ExtractedData={ExtractedData}/>}
+            {ExtractedData && <Result ExtractedData={ExtractedData}/>} */}
             
 
         </section>
@@ -133,14 +133,14 @@ function Section1Input({ClickEvent,setLink,isLoading}){
 function Result({ExtractedData}){
     return(
         <>
-        {/* <div className="ft-result-w3-c6"> */}
+   
         <div className="result">
             
             {ExtractedData.map((e,i)=><ResultOutput data ={e} index ={i} key = {i}/>)}
             
         </div>
-        {/* <p>hello</p> */}
-        {/* </div> */}
+        {/* <ProfileResult/> */}
+       
         
         </>
     )
@@ -187,5 +187,15 @@ function DownloadAgain({setExtractedData}){
 
 Download more
         </a>
+    )
+}
+
+
+
+function ProfileResult(){
+    return(
+        <h1>
+            hi
+        </h1>
     )
 }
