@@ -45,8 +45,7 @@ export default function Section1({Heading,setHeading}){
             {/* {
          (ExtractedData === null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:""}
             {ExtractedData && <Result ExtractedData={ExtractedData}/>} */}
-            
-
+            <ProfileResult/>
         </section>
 
         {ExtractedData &&<DownloadAgain setExtractedData={setExtractedData}/>}
@@ -194,8 +193,20 @@ Download more
 
 function ProfileResult(){
     return(
-        <h1>
-            hi
-        </h1>
+        <div className="profile-result-w3-c4">
+            <div className="profile-result-w3-c4-image">
+                <img src="img/dev.jpeg" alt="" />
+                <div className="profile-result-w3-c4-image-dwn">
+                    <span>Download Profile Image</span>
+                </div>
+            </div>
+            <div className="profile-result-w3-c4-follow">
+                <div>followers</div>
+                <div>following</div>
+                <div>post</div>
+            </div>
+
+
+        </div>
     )
 }
