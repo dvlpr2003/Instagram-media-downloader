@@ -49,6 +49,7 @@ section{
 .profile-result-w3-c4-txt {
     display: flex;
     justify-content: center;
+    font-family: Roboto, sans-serif;
     align-items: center;
     gap: .5rem;
 }
@@ -60,7 +61,7 @@ section{
     align-items: center;
 }
 .profile-result-w3-c4-svg-container {
-    border: 1px solid black;
+    border: 1px solid rgb(194, 194, 194);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -74,6 +75,7 @@ section{
 .profile-result-w3-c4-image-dwn {
     border: 1px solid #48e748;
     border-radius: 15px;
+    cursor: pointer;
     font-family: Roboto, sans-serif;
     width: 12rem;
     height: 3rem;
@@ -92,9 +94,6 @@ section{
     font-family: Roboto, sans-serif;
 
 }
-
-
-
 
 .j-6 {
     height: 2rem;
@@ -188,6 +187,10 @@ section{
     text-align: center;
 
 }
+.profile-result-w3-c4-svg-container:hover {
+    background-color: rgb(140, 96, 96);
+
+}
 #input-w3-c7-form{
     padding: 1.45rem;
     width:50rem;
@@ -197,6 +200,7 @@ section{
     justify-content: center;
     align-items: center;
 }
+
 #input-w3-c7-main{
     flex-grow: 1;
 }

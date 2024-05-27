@@ -2,6 +2,7 @@
 import axios from "axios"
 import "./container.css"
 import { useState } from "react";
+import { extractUsername } from "./Username";
 
 const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
@@ -19,9 +20,7 @@ export default function Section1({Heading,setHeading}){
         let uniqueIdentifier = "";
         if (match && match[1]) {
           uniqueIdentifier = match[1];
-        }
-        console.log(uniqueIdentifier)
-        try{
+          try{
             setLoading(true)
             const response = await axios.get(`http://127.0.0.1:8000/api/download-instagram-post/${uniqueIdentifier}`);
             // console.log(response.data)
@@ -32,6 +31,25 @@ export default function Section1({Heading,setHeading}){
             console.log(error)
             setLoading(false)
         }
+        }
+        else{
+            const extractname = extractUsername(Link)
+            try{
+                setLoading(true)
+
+                const response = await axios.get(`http://127.0.0.1:8000/api/get-profile-info/${extractname}/`)
+                console.log(response)
+                setLoading(false)
+
+            }
+            catch(error){
+                console.log(error)
+                setLoading(false)
+
+            }
+        }
+
+
     }
 
 
@@ -42,10 +60,10 @@ export default function Section1({Heading,setHeading}){
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            {/* {
+            {
          (ExtractedData === null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:""}
-            {ExtractedData && <Result ExtractedData={ExtractedData}/>} */}
-            <ProfileResult/>
+            {ExtractedData && <Result ExtractedData={ExtractedData}/>}
+            {/* <ProfileResult/> */}
         </section>
 
         {ExtractedData &&<DownloadAgain setExtractedData={setExtractedData}/>}
