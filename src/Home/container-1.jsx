@@ -208,8 +208,12 @@ function ProfileResult({ProfileInfo}){
             <div className="profile-result-w3-c4-image">
                 <img src={ProfileInfo.profile_pic_url} alt="" />
                 <div className="profile-result-w3-c4-image-dwn">
-                    <span>Download Profile Image</span>
+                    <a href={ProfileInfo.profile_pic_url} download={`${ProfileInfo.username}.jpeg`} className="w3-c7-download-btn">Download Profile Image</a>
                 </div>
+            </div>
+            <div className="profile-result-w3-c4-username">
+                <span>{ProfileInfo.username}</span>
+
             </div>
             <div className="profile-result-w3-c4-follow" >
                 <div>{ProfileInfo.followers}followers</div>
