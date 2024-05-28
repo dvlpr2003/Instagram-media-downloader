@@ -64,14 +64,13 @@ section{
     align-items: center;
 }
 .profile-result-w3-c4-svg-container {
-    border: 1px solid rgb(194, 194, 194);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 4px;
-    right: 4px;
+    right: 7px;
 }
 .profile-result-w3-c4-image img {
     width: 7rem;
@@ -178,7 +177,8 @@ section{
     text-align: center;
 }
 .profile-result-w3-c4-svg-container:hover {
-    background-color: rgb(140, 96, 96);
+    background-color: #8ef79e;
+    border: 1px solid #8ef79e;
 }
 #input-w3-c7-form{
     padding: 1.45rem;

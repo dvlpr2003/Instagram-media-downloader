@@ -71,7 +71,7 @@ export default function Section1({Heading,setHeading}){
 
         </section>
 
-        {ExtractedData &&<DownloadAgain setExtractedData={setExtractedData}/>}
+        {(ExtractedData || ProfileInfo) &&<DownloadAgain setExtractedData={setExtractedData} setProfileInfo={setProfileInfo}/>}
         </div>
     )
 }
@@ -149,7 +149,7 @@ function Result({ExtractedData}){
             {ExtractedData.map((e,i)=><ResultOutput data ={e} index ={i} key = {i}/>)}
             
         </div>
-        {/* <ProfileResult/> */}
+        
        
         
         </>
@@ -187,10 +187,10 @@ function ResultOutput({data,index}){
     )
 }
 
-function DownloadAgain({setExtractedData}){
+function DownloadAgain({setExtractedData,setProfileInfo}){
 
     return(
-        <a href='#app'className="Download-again-btn" onClick={()=>setExtractedData(null)}>
+        <a href='#app'className="Download-again-btn" onClick={()=>{setExtractedData(null); setProfileInfo(null);}}>
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 j-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
 </svg>
