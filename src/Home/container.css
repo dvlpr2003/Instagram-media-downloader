@@ -92,7 +92,7 @@ section{
 }
 .profile-result-w3-c4-follow {
     display: flex;
-    gap: 2.5rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     height: 3.5rem;
@@ -416,6 +416,12 @@ section{
     #input-w3-c7-form{
         width: auto;
     }
+    .profile-result-w3-c4{
+        width: 20rem;
+    }
+    .c7-clip{
+        height: 1.6rem;
+    }
 }
 @media(min-width:550px) and (max-width:750px){
     .name-w3-c7{
@@ -434,6 +440,9 @@ section{
     }
     #input-w3-c7-form{
         width: 30rem;
+    }
+    .c7-clip{
+        height: 1.9rem;
     }
 
 
