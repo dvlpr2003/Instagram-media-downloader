@@ -3,7 +3,7 @@ export const extractUsername = (url) => {
       const urlObj = new URL(url);
       return urlObj.pathname.split('/')[1];
     } catch (error) {
-      console.error("Invalid URL");
+      // console.error("Invalid URL");
       return null;
     }
   };

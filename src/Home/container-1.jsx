@@ -24,7 +24,7 @@ export default function Section1({Heading,setHeading}){
           try{
             setLoading(true)
             const response = await axios.get(`http://127.0.0.1:8000/api/download-instagram-post/${uniqueIdentifier}`);
-            // console.log(response.data)
+            console.log(response.data)
             setExtractedData(response.data)
 
             setLoading(false)
@@ -35,6 +35,10 @@ export default function Section1({Heading,setHeading}){
         }
         else{
             const extractname = extractUsername(Link)
+            // console.log(extractname)
+            console.log(extractname)
+            if (extractname === null) return alert("Url field is empty")
+            
             try{
                 setLoading(true)
 
@@ -45,7 +49,7 @@ export default function Section1({Heading,setHeading}){
 
             }
             catch(error){
-                console.log(error)
+                // console.log(error)
                 setLoading(false)
 
             }
