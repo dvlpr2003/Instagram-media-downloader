@@ -19,11 +19,13 @@ section{
     justify-content: center; 
 }
 .profile-result-w3-c4{
+    border: 1px solid red;
     background-color: white;
     border-radius: 15px;
-    width: 25rem;
-    height: 29rem;
+    width: 35rem;
+    height: auto;
     margin-top: 3rem;
+    padding-bottom: 4rem;
 }
 .c7-clip {
     height: 1.1rem;
