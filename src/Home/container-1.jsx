@@ -244,7 +244,10 @@ function ProfileResult({ProfileInfo}){
 
                 </div>
             <div className="profile-story-result-43-c4-story">
-                <StoryResult/>
+                {
+                    ProfileInfo.story.map((e)=><StoryResult storyCover = {e.story_cover} storyVideo = {e.story_video}/>)
+                }
+                
 
 
             </div>
@@ -259,11 +262,11 @@ function ProfileResult({ProfileInfo}){
 
 
 
-function StoryResult(){
+function StoryResult({storyCover,storyVideo}){
     return(
         <div className="result-sub img">
-            <img src="img/dev.jpeg" alt="" />
-            <a href ='#' className="svg-container-w3-c7">
+            <img src={storyCover} alt="" />
+            <a href ={storyVideo} target="new"className="svg-container-w3-c7">
             <svg width="21" height="21" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M1.99097 6.74137C2.42921 5.50195 3.20203 4.40806 4.22383 3.58092" stroke="black" stroke-width="1.06667"
         stroke-linecap="round" stroke-linejoin="round"/>
