@@ -276,6 +276,8 @@ section{
     align-items: center;
     gap: 1rem;
     background-color: #48e748;
+    text-decoration: none;
+    color: #000;
     font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 .svg-container-w3-c7 svg {
