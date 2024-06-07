@@ -19,7 +19,7 @@ section{
     justify-content: center; 
 }
 .profile-result-w3-c4{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: white;
     border-radius: 15px;
     width: 50rem;
