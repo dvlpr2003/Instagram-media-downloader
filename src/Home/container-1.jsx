@@ -245,7 +245,7 @@ function ProfileResult({ProfileInfo}){
                 </div>
             <div className="profile-story-result-43-c4-story">
                 {
-                    ProfileInfo.story.map((e)=><StoryResult storyCover = {e.story_cover} storyVideo = {e.story_video}/>)
+                    ProfileInfo.story.map((e,i)=><StoryResult storyCover = {e.story_cover} storyVideo = {e.story_video} key={i}/>)
                 }
                 
 
