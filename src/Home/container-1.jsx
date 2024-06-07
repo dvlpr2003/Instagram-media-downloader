@@ -147,19 +147,12 @@ function Section1Input({ClickEvent,setLink,isLoading}){
 function Result({ExtractedData}){
     return(
         <>
-   
-        <div className="result">
-            
-            {ExtractedData.map((e,i)=><ResultOutput data ={e} index ={i} key = {i}/>)}
-            
+        <div className="result">  
+            {ExtractedData.map((e,i)=><ResultOutput data ={e} index ={i} key = {i}/>)}    
         </div>
-        
-       
-        
         </>
     )
 }
-
 function ResultOutput({data,index}){
     return(
         <div className="result-sub img">
@@ -175,14 +168,9 @@ function ResultOutput({data,index}){
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
 </svg>
-
 }
-
-
-
 {data.url.video ?<a href={data.url.video_c5} download={true} target="new" className="w3-c7-download-btn">Download video</a>:<a href={data.url.img_c5} className="w3-c7-download-btn" download={true}>Download image</a>}
 </div>
-
         </div>
   
     </div>
@@ -190,22 +178,16 @@ function ResultOutput({data,index}){
 
     )
 }
-
 function DownloadAgain({setExtractedData,setProfileInfo}){
-
     return(
         <a href='#app'className="Download-again-btn" onClick={()=>{setExtractedData(null); setProfileInfo(null);}}>
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 j-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
 </svg>
-
 Download more
         </a>
     )
 }
-
-
-
 function ProfileResult({ProfileInfo}){
     const [text, setText] = useState('');
     const copyToClipboard = () => {
@@ -245,28 +227,18 @@ function ProfileResult({ProfileInfo}){
                 </div>
             <div className="profile-story-result-43-c4-story">
                 {
-                    ProfileInfo.story.map((e,i)=><StoryResult storyCover = {e.story_cover} storyVideo = {e.story_video} key={i}/>)
+                    ProfileInfo.story.map((e,i)=><StoryResult storyCover = {e.story_cover} storyVideo = {e.story_video} key={i} name ={ProfileInfo.username}/>)
                 }
-                
-
-
             </div>
             </div>
-
-
-
         </div>
     )
 }
-
-
-
-
-function StoryResult({storyCover,storyVideo}){
+function StoryResult({storyCover,storyVideo,name}){
     return(
         <div className="result-sub img">
             <img src={storyCover} alt="" />
-            <a href ={storyVideo} target="new"className="svg-container-w3-c7" download={true}>
+            <a href ={storyVideo} target="new"className="svg-container-w3-c7" download={name}>
             <svg width="21" height="21" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M1.99097 6.74137C2.42921 5.50195 3.20203 4.40806 4.22383 3.58092" stroke="black" strokeWidth="1.06667"
         strokeLinecap="round" strokeLinejoin="round"/>
