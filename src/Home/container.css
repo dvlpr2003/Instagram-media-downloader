@@ -102,6 +102,14 @@ section{
     background-color: #48e748;
     font-size: .9rem;
 }
+.b-bold{
+    display: flex;
+    gap: .3rem;
+
+}
+.bold {
+    font-weight: bold;
+}
 .profile-result-w3-c4-follow {
     display: flex;
     gap: 1rem;

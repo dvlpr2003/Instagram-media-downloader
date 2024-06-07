@@ -211,9 +211,9 @@ function ProfileResult({ProfileInfo}){
 
             </div>
             <div className="profile-result-w3-c4-follow" >
-                <div>{ProfileInfo.followers}followers</div>
-                <div>{ProfileInfo.following}following</div>
-                <div>{ProfileInfo.posts}post</div>
+                <div className="b-bold"><span className="bold">{ProfileInfo.followers}</span><span>followers</span></div>
+                <div className="b-bold"><span className="bold">{ProfileInfo.following}</span><span>following</span></div>
+                <div className="b-bold"><span className="bold">{ProfileInfo.posts}</span><span>post</span></div>
             </div>
             <div className="profile-result-w3-c4-txt-clip">
                 <div className="profile-result-w3-c4-txt">{ProfileInfo.bio}
