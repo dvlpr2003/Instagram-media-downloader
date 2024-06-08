@@ -16,9 +16,12 @@ export default function Section1({Heading,setHeading}){
     async function getDada(){
         const regex = /\/reel\/([^/]+)\//;
         const regex2 = /\/p\/([^/]+)\//;
+        const regex3 = /\/stories\/[^/]+\/([^/?]+)[/?]/;
         const match = Link.match(regex) || Link.match(regex2);
+        const match2 =Link.match(regex3)
       
         let uniqueIdentifier = "";
+        let storyId = '';
         if (match && match[1]) {
           uniqueIdentifier = match[1];
           try{
@@ -32,6 +35,11 @@ export default function Section1({Heading,setHeading}){
             console.log(error)
             setLoading(false)
         }
+        }else if (match2){
+            storyId = match2[1]
+            console.log('this is story')
+            console.log(storyId)
+
         }
         else{
             const extractname = extractUsername(Link)
