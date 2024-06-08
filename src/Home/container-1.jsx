@@ -203,7 +203,7 @@ function ProfileResult({ProfileInfo}){
             <div className="profile-result-w3-c4-image">
                 <img src={ProfileInfo.profile_pic_url} alt="" />
                 <div className="profile-result-w3-c4-image-dwn">
-                    <a href={ProfileInfo.profile_pic_url} download={`${ProfileInfo.username}.jpeg`} className="w3-c7-download-btn">Download Profile Image</a>
+                    <a href={ProfileInfo.profile_pic_url} download={`${ProfileInfo.username}_profile_img.jpeg`} className="w3-c7-download-btn">Download Profile Image</a>
                 </div>
             </div>
             <div className="profile-result-w3-c4-username">
