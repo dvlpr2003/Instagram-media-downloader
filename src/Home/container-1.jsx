@@ -22,6 +22,7 @@ export default function Section1({Heading,setHeading}){
       
         let uniqueIdentifier = "";
         let storyId = '';
+        let usrnm ='';
         if (match && match[1]) {
           uniqueIdentifier = match[1];
           try{
@@ -36,9 +37,11 @@ export default function Section1({Heading,setHeading}){
             setLoading(false)
         }
         }else if (match2){
+            
             storyId = match2[1]
-            console.log('this is story')
+            usrnm = match2[0].split("/")[2]
             console.log(storyId)
+            console.log(usrnm)
 
         }
         else{
