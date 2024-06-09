@@ -27,6 +27,21 @@ section{
     margin-top: 3rem;
     padding-bottom: 4rem;
 }
+.profile-result-w3-c7-story{
+    background-color: white;
+    border-radius: 15px;
+    width: 40rem;
+    height: auto;
+    margin-top: 3rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
 .profile-story-result-43-c4-story{
     display: flex;
     flex-direction: row;
@@ -441,6 +456,7 @@ section{
     .profile-result-w3-c4{
         width: 20rem;
     }
+
     .c7-clip{
         height: 1.6rem;
     }
