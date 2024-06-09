@@ -12,6 +12,7 @@ export default function Section1({Heading,setHeading}){
     const [isLoading,setLoading]=useState(false)
     const [ExtractedData,setExtractedData]=useState(null)
     const [ProfileInfo,setProfileInfo] = useState(null)
+    const [Sstory,setSstory]=useState(null)
     // console.log(ExtractedData)
     async function getDada(){
         const regex = /\/reel\/([^/]+)\//;
@@ -44,6 +45,7 @@ export default function Section1({Heading,setHeading}){
                 setLoading(true)
                 const response = await axios.get(`http://127.0.0.1:8000/api/get-story/${usrnm}/${storyId}/`)
                 setLoading(false)
+                setSstory(response.data)
                 console.log(response.data)
             }catch(error){
                 console.log(error)
@@ -84,16 +86,16 @@ export default function Section1({Heading,setHeading}){
     return(
         <div id="app">
         <section id="instagram-downloader-home-1">
-            {/* {
-         (ExtractedData === null )&& (ProfileInfo === null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:''}
+            {
+         (ExtractedData === null )&& (ProfileInfo === null) && (Sstory==null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:''}
             {ExtractedData &&<Result ExtractedData={ExtractedData}/>}
-            {ProfileInfo&& <ProfileResult ProfileInfo={ProfileInfo}/>} */}
-            <SinglStory/>
+            {ProfileInfo&& <ProfileResult ProfileInfo={ProfileInfo}/>}
+            {Sstory && <SingleStory Sstory={Sstory}/>}
             
 
         </section>
 
-        {(ExtractedData || ProfileInfo) &&<DownloadAgain setExtractedData={setExtractedData} setProfileInfo={setProfileInfo}/>}
+        {(ExtractedData || ProfileInfo || Sstory) &&<DownloadAgain setExtractedData={setExtractedData} setProfileInfo={setProfileInfo} setSstory={setSstory}/>}
         </div>
     )
 }
@@ -196,9 +198,9 @@ function ResultOutput({data,index}){
 
     )
 }
-function DownloadAgain({setExtractedData,setProfileInfo}){
+function DownloadAgain({setExtractedData,setProfileInfo,setSstory}){
     return(
-        <a href='#app'className="Download-again-btn" onClick={()=>{setExtractedData(null); setProfileInfo(null);}}>
+        <a href='#app'className="Download-again-btn" onClick={()=>{setExtractedData(null); setProfileInfo(null); setSstory(null)}}>
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 j-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
 </svg>
@@ -290,12 +292,12 @@ function StoryResult({storyCover,storyVideo,name}){
 
 
 
-function SinglStory(){
+function SingleStory({Sstory}){
     return(
         <div className="profile-result-w3-c7-story">
         <div className="result-sub img">
-        <img src='' alt="" />
-        <a href ='' target="new"className="svg-container-w3-c7" download={true}>
+        <img src={Sstory['story_cover']} alt="" />
+        <a href ={Sstory['story_video']} target="new"className="svg-container-w3-c7" download={true}>
                 <svg width="21" height="21" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.99097 6.74137C2.42921 5.50195 3.20203 4.40806 4.22383 3.58092" stroke="black" strokeWidth="1.06667"
                         strokeLinecap="round" strokeLinejoin="round"/>
