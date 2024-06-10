@@ -431,6 +431,9 @@ section{
         height: 2.7rem;
 
     }
+    .b-bold{
+        font-size:.8rem;
+    }
 
 }
 @media(min-width:300px) and (max-width:550px){
@@ -459,6 +462,9 @@ section{
 
     .c7-clip{
         height: 1.6rem;
+    }
+    .b-bold{
+        font-size:.8rem;
     }
 }
 @media(min-width:550px) and (max-width:750px){
