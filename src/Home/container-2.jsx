@@ -44,7 +44,8 @@ function Section2Body({Heading,setHeading}){
                     Instagram Reels Downloader
                     </a>
                     <p className="w4-c7-s-b-txt-p">
-                    Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
+                    
+                    Easily access and download Instagram videos and Reels anonymously, maintaining their original resolution or selecting reduced sizes, all at no cost. Our service ensures your downloaded videos and Reels are stored securely, making them readily available whenever you need them.
                     </p>
                 </div>
             </div>
@@ -54,7 +55,7 @@ function Section2Body({Heading,setHeading}){
                     Instagram Video Downloader
                     </a>
                     <p className="w4-c7-s-b-txt-p">
-                    Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
+                    Seamlessly download Instagram videos and Reels anonymously, retaining their original resolution or opting for smaller sizes, all for free. Our service guarantees that your downloaded content is stored safely, ensuring easy access whenever you need it.
                     </p>
                 </div>
                 <div className="w4-c7-s-b-img-container" >
@@ -70,7 +71,7 @@ function Section2Body({Heading,setHeading}){
                     Carousel / Album Downloader
                     </a>
                     <p className="w4-c7-s-b-txt-p">
-                    Effortlessly access and download Instagram photos anonymously, preserving their original resolution or opting for reduced sizes, all free of charge. With our service, downloaded images are conveniently stored for easy access whenever you need them.
+                    Easily download Instagram videos, Reels, and Carousel/Album posts anonymously, preserving their original resolution or selecting smaller sizes, all for free. Our service ensures your downloaded content is securely stored and readily accessible whenever you need it.
                     </p>
                 </div>
             </div>
