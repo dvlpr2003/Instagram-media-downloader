@@ -1,7 +1,7 @@
 
 import axios from "axios"
 import "./container.css"
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { extractUsername } from "./Username";
 
 const delay = ms => new Promise(
@@ -152,10 +152,15 @@ function Section1P(){
     )
 }
 function Section1Input({ClickEvent,setLink,isLoading}){
+    const Fcs = useRef(null)
+    useEffect(()=>{
+        Fcs.current.focus()
+
+    },[])
     return(
         <div id="input-w3-c7-main">
             <div id="input-w3-c7-main-element">
-                <input type="text" className="input-w3-c7" placeholder="https://" onChange={(e)=>setLink(e.target.value)}/>
+                <input type="text" className="input-w3-c7" placeholder="https://" onChange={(e)=>setLink(e.target.value)} ref={Fcs}/>
                 <span type="submit" className="input-w3-c7-btn" onClick={ClickEvent}>
                 {isLoading?<div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>:"Donwload"}
                     </span>
