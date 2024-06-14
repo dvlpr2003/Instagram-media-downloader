@@ -136,8 +136,13 @@ function Section1Elements({Heading,setHeading,ClickEvent,setLink,isLoading}){
             </div>
             <form id="input-w3-c7-form">
                 <Section1Input ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>
+                
 
             </form>
+            {
+                isLoading?<p>Please wait . . .</p>:""
+                
+            }
         </div>
     )
 }
