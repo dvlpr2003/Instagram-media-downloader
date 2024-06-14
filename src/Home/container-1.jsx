@@ -140,7 +140,7 @@ function Section1Elements({Heading,setHeading,ClickEvent,setLink,isLoading}){
 
             </form>
             {
-                isLoading?<p>Please wait . . .</p>:""
+                isLoading?<p className="wait-load">Please wait . . .</p>:""
                 
             }
         </div>
