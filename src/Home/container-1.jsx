@@ -13,6 +13,7 @@ export default function Section1({Heading,setHeading}){
     const [ExtractedData,setExtractedData]=useState(null)
     const [ProfileInfo,setProfileInfo] = useState(null)
     const [Sstory,setSstory]=useState(null)
+    const [Errormsg,setErrormsg]=useState(false)
     // console.log(ExtractedData)
     async function getDada(){
         const regex = /\/reel\/([^/]+)\//;
@@ -34,7 +35,8 @@ export default function Section1({Heading,setHeading}){
 
             setLoading(false)
         }catch(error){
-            console.log(error)
+            // console.log(error)
+            setErrormsg(true)
             setLoading(false)
         }
         }else if (match2){
@@ -49,6 +51,7 @@ export default function Section1({Heading,setHeading}){
                 setSstory(response.data)
             }catch(error){
                 console.log(error)
+                setErrormsg(true)
                 setLoading(false)
             }
 
@@ -71,6 +74,7 @@ export default function Section1({Heading,setHeading}){
             catch(error){
                 // console.log(error)
                 setLoading(false)
+                setErrormsg(true)
 
             }
         }
@@ -80,6 +84,7 @@ export default function Section1({Heading,setHeading}){
 
 
     function ClickEvent(){
+        setErrormsg(false)
         getDada()
 
     }
@@ -87,7 +92,7 @@ export default function Section1({Heading,setHeading}){
         <div id="app">
         <section id="instagram-downloader-home-1">
             {
-         (ExtractedData === null )&& (ProfileInfo === null) && (Sstory==null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading}/>:''}
+         (ExtractedData === null )&& (ProfileInfo === null) && (Sstory==null)?<Section1Elements Heading={Heading} setHeading={setHeading} ClickEvent={ClickEvent} setLink={setLink} isLoading={isLoading} Errormsg={Errormsg}/>:''}
             {ExtractedData &&<Result ExtractedData={ExtractedData}/>}
             {ProfileInfo&& <ProfileResult ProfileInfo={ProfileInfo}/>}
             {Sstory && <SingleStory Sstory={Sstory}/>}
@@ -100,7 +105,7 @@ export default function Section1({Heading,setHeading}){
     )
 }
 
-function Section1Elements({Heading,setHeading,ClickEvent,setLink,isLoading}){
+function Section1Elements({Heading,setHeading,ClickEvent,setLink,isLoading,Errormsg}){
     return(
         <div id="section-elements">
             <div id="section-elements-nav-main">
@@ -141,8 +146,16 @@ function Section1Elements({Heading,setHeading,ClickEvent,setLink,isLoading}){
             </form>
             {
                 isLoading?<p className="wait-load">Please wait . . .</p>:""
+
                 
             }
+            {
+                Errormsg?<div className="Error-bx">
+                <p>Something went wrong</p>
+                </div>:""
+                
+            }
+
         </div>
     )
 }
